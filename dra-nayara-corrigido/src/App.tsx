@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import NaturalLipsFeature from './components/NaturalLipsFeature';
 import Procedures from './components/Procedures';
 import ComplementaryProcedures from './components/ComplementaryProcedures';
+import BusinessDetails from './components/BusinessDetails';
 import ClinicGallery from './components/ClinicGallery';
 import AboutDoctor from './components/AboutDoctor';
 import InteractiveAssessment from './components/InteractiveAssessment';
@@ -20,6 +21,7 @@ export default function App() {
         <NaturalLipsFeature />
         <Procedures />
         <ComplementaryProcedures />
+        <BusinessDetails />
         <ClinicGallery />
         <AboutDoctor />
         <InteractiveAssessment />

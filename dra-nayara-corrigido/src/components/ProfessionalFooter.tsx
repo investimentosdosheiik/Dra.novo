@@ -19,13 +19,14 @@ export default function ProfessionalFooter() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#A89E97]">
               Odontologia e estética facial com atendimento individualizado em Belém, Pará.
             </p>
-            <div className="mt-5 flex gap-3">
-              <a href={CLINIC_INFO.instagramDoctorUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Nayana" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2A2421] text-[#E0D5CE] transition-colors hover:bg-[#8C6D58] hover:text-white">
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <a href={CLINIC_INFO.instagramDoctorUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Dra. Nayana: @dra.nayananunescunha" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2A2421] text-[#E0D5CE] transition-colors hover:bg-[#8C6D58] hover:text-white">
                 <Instagram aria-hidden="true" className="h-4 w-4" />
               </a>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Falar com a clínica pelo WhatsApp" className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2A2421] text-[#E0D5CE] transition-colors hover:bg-[#8C6D58] hover:text-white">
                 <MessageCircle aria-hidden="true" className="h-4 w-4" />
               </a>
+              <a href={CLINIC_INFO.instagramDoctorUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-[#D8CFCA] transition-colors hover:text-white">@dra.nayananunescunha</a>
             </div>
           </div>
 

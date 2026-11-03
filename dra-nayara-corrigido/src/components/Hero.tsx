@@ -8,149 +8,129 @@ export default function Hero() {
   )}`;
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-[#FAF8F5] via-[#F6F1EA] to-[#FAF8F5]">
-      {/* Background delicate artistic glows */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-tr from-[#EEDFD2]/40 via-[#F3E7DC]/30 to-transparent blur-3xl pointer-events-none rounded-full" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Editorial Copy & CTAs */}
-          <motion.div 
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-[#F6F1EA] to-[#FAF8F5] pb-16 pt-8 lg:pb-24 lg:pt-16">
+      <div className="pointer-events-none absolute left-1/2 top-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-tr from-[#EEDFD2]/40 via-[#F3E7DC]/30 to-transparent blur-3xl" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 flex flex-col justify-center space-y-6"
+            className="flex flex-col justify-center space-y-6 lg:col-span-7"
           >
-            {/* Subtle editorial kicker */}
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#8C6D58]">
-              <Sparkles className="w-3.5 h-3.5 text-[#B88E71]" />
+              <Sparkles className="h-3.5 w-3.5 text-[#B88E71]" />
               <span>Clínica Oral Center · Belém / PA</span>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl text-[#1E1B18] font-semibold leading-[1.08] tracking-tight text-balance">
-              A arte de realçar seus traços com <span className="italic font-normal text-[#8C6D58]">absoluta naturalidade</span>.
+            <h1 className="font-serif-luxury text-4xl font-semibold leading-[1.08] tracking-tight text-[#1E1B18] sm:text-5xl lg:text-6xl">
+              A arte de realçar seus traços com <span className="font-normal italic text-[#8C6D58]">naturalidade e segurança</span>.
             </h1>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg text-[#5A514B] font-sans-clean leading-relaxed max-w-2xl">
-              Há mais de <span className="font-semibold text-[#1E1B18]">9 anos no mercado</span>, a Dra. Nayana Cunha une a precisão da odontologia avançada à sutileza da harmonização orofacial para entregar uma experiência premium onde sua essência é sempre respeitada.
+            <p className="max-w-2xl text-base leading-relaxed text-[#5A514B] sm:text-lg">
+              Há mais de <span className="font-semibold text-[#1E1B18]">9 anos no mercado</span>, a Dra. Nayana Cunha combina precisão clínica, odontologia avançada e harmonização facial para resultados elegantes e verdadeiramente naturais.
             </p>
 
-            {/* Direct CTAs */}
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <div className="flex flex-col items-stretch gap-4 pt-2 sm:flex-row sm:items-center">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-7 py-3.5 text-sm font-semibold tracking-wide text-white bg-[#8C6D58] hover:bg-[#745743] rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98] whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-[#8C6D58] px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-md transition-all duration-200 hover:bg-[#745743]"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Agendar Avaliação via WhatsApp</span>
+                <MessageCircle className="h-4 w-4" />
+                <span>Agendar avaliação</span>
               </a>
 
               <a
                 href="#naturalidade"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-[#4A413A] hover:text-[#1E1B18] bg-white/70 hover:bg-white border border-[#E2D5C8] rounded-full transition-all duration-200 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#E2D5C8] bg-white/70 px-6 py-3.5 text-sm font-semibold text-[#4A413A] transition-all duration-200 hover:bg-white hover:text-[#1E1B18]"
               >
-                <span>Conhecer a Filosofia</span>
-                <ArrowRight className="w-4 h-4 text-[#8C6D58]" />
+                <span>Conhecer a filosofia</span>
+                <ArrowRight className="h-4 w-4 text-[#8C6D58]" />
               </a>
             </div>
 
-            {/* Trust Indicators Strip (clean editorial text, no pill wrappers) */}
-            <div className="pt-6 border-t border-[#E8DDD1]/80 grid grid-cols-3 gap-4 sm:gap-6 text-left">
+            <div className="grid grid-cols-3 gap-4 border-t border-[#E8DDD1]/80 pt-6 text-left sm:gap-6">
               <div>
-                <p className="font-serif-luxury text-2xl sm:text-3xl font-semibold text-[#1E1B18] tabular-nums">9+ Anos</p>
-                <p className="text-xs text-[#706660] font-medium mt-0.5">De excelência clínica</p>
+                <p className="font-serif-luxury text-2xl font-semibold tabular-nums text-[#1E1B18] sm:text-3xl">9+ Anos</p>
+                <p className="mt-0.5 text-xs font-medium text-[#706660]">De excelência clínica</p>
               </div>
               <div>
-                <p className="font-serif-luxury text-2xl sm:text-3xl font-semibold text-[#1E1B18]">100%</p>
-                <p className="text-xs text-[#706660] font-medium mt-0.5">Foco em naturalidade</p>
+                <p className="font-serif-luxury text-2xl font-semibold text-[#1E1B18] sm:text-3xl">100%</p>
+                <p className="mt-0.5 text-xs font-medium text-[#706660]">Foco em naturalidade</p>
               </div>
               <div>
-                <p className="font-serif-luxury text-2xl sm:text-3xl font-semibold text-[#1E1B18]">Exclusivo</p>
-                <p className="text-xs text-[#706660] font-medium mt-0.5">Planejamento individual</p>
+                <p className="font-serif-luxury text-2xl font-semibold text-[#1E1B18] sm:text-3xl">CRO-PA</p>
+                <p className="mt-0.5 text-xs font-medium text-[#706660]">4901</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Hero Visual Showcase */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 relative flex justify-center lg:justify-end"
+            className="relative flex justify-center lg:col-span-5 lg:justify-end"
           >
-            {/* Elegant frame container */}
             <div className="relative w-full max-w-md lg:max-w-none">
-              
-              {/* Backing decorative architectural panel */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-[#8C6D58]/20 to-[#E8DDD1]/50 rounded-3xl transform rotate-1 blur-[2px]" />
+              <div className="absolute -inset-2 rotate-1 rounded-3xl bg-gradient-to-tr from-[#8C6D58]/20 to-[#E8DDD1]/50 blur-[2px]" />
 
-              <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl border border-[#EADECE]">
+              <div className="relative overflow-hidden rounded-2xl border border-[#EADECE] bg-white shadow-xl">
                 <img
                   src="/assets/aistudio/dra-nayana-retrato_00a06c79.jpg"
                   alt="Dra. Nayana Cunha - Odontologia Estética e Harmonização"
-                  className="w-full h-[460px] sm:h-[520px] object-cover object-top transition-transform duration-700 hover:scale-[1.02]"
+                  className="h-[460px] w-full object-cover object-top transition-transform duration-700 hover:scale-[1.02] sm:h-[520px]"
                   referrerPolicy="no-referrer"
                 />
 
-                {/* Subtle soft gradient scrim for contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                {/* Bottom Card Identity Overlay */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-white/60 shadow-lg text-left">
-                  <div className="flex items-center justify-between">
+                <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/60 bg-white/90 p-4 text-left shadow-lg backdrop-blur-md">
+                  <div className="flex items-center justify-between gap-4">
                     <div>
-                      <p className="font-serif-luxury text-xl font-semibold text-[#1E1B18] leading-tight">
-                        {CLINIC_INFO.doctorFull}
-                      </p>
-                      <p className="text-xs text-[#8C6D58] font-medium tracking-wide">
-                        Odontologia & Harmonização Facial
-                      </p>
+                      <p className="font-serif-luxury text-xl font-semibold leading-tight text-[#1E1B18]">{CLINIC_INFO.doctorFull}</p>
+                      <p className="text-xs font-medium tracking-wide text-[#8C6D58]">Odontologia & Harmonização Facial</p>
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-[#FAF6F2] border border-[#E2D5C8] flex items-center justify-center text-[#8C6D58] shrink-0">
-                      <Award className="w-5 h-5" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E2D5C8] bg-[#FAF6F2] text-[#8C6D58]">
+                      <Award className="h-5 w-5" />
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Floating Accent Badge */}
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-sm border border-[#E5DACD] px-4 py-2.5 rounded-xl shadow-md flex items-center gap-3 text-left"
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -left-4 -top-4 rounded-xl border border-[#E5DACD] bg-white/95 px-4 py-2.5 shadow-md sm:-left-6"
               >
-                <div className="w-8 h-8 rounded-full bg-[#F3ECE4] flex items-center justify-center text-[#8C6D58]">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-[#1E1B18]">Procedimentos Seguros</p>
-                  <p className="text-[10px] text-[#706660]">Produtos de padrão ouro</p>
+                <div className="flex items-center gap-3 text-left">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F3ECE4] text-[#8C6D58]">
+                    <ShieldCheck className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-[#1E1B18]">Procedimentos seguros</p>
+                    <p className="text-[10px] text-[#706660]">Produtos de padrão ouro</p>
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Second floating badge bottom right */}
-              <motion.div 
+              <motion.div
                 animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="hidden sm:flex absolute -bottom-3 -right-4 bg-white/95 backdrop-blur-sm border border-[#E5DACD] px-4 py-2.5 rounded-xl shadow-md items-center gap-3 text-left"
+                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                className="absolute -bottom-3 -right-4 hidden items-center gap-3 rounded-xl border border-[#E5DACD] bg-white/95 px-4 py-2.5 shadow-md sm:flex"
               >
-                <div className="w-8 h-8 rounded-full bg-[#F3ECE4] flex items-center justify-center text-[#8C6D58]">
-                  <HeartHandshake className="w-4 h-4" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F3ECE4] text-[#8C6D58]">
+                  <HeartHandshake className="h-4 w-4" />
                 </div>
-                <div>
-                  <p className="text-xs font-semibold text-[#1E1B18]">Sem Exageros</p>
+                <div className="text-left">
+                  <p className="text-xs font-semibold text-[#1E1B18]">Sem exageros</p>
                   <p className="text-[10px] text-[#706660]">Sua essência preservada</p>
                 </div>
               </motion.div>
-
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
